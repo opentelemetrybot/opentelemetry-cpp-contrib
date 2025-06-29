@@ -15,6 +15,9 @@ on:
       - "exporters/geneva-trace/**"
       - ".github/workflows/geneva_trace.yml"
   
+permissions:
+  contents: read
+  
 jobs:
   geneva-trace-nuget-generation:
     name: Geneva Trace
