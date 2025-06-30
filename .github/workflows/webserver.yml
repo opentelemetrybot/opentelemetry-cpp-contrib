@@ -12,6 +12,9 @@ on:
       - 'instrumentation/otel-webserver-module/**'
       - '.github/workflows/webserver.yml'
 
+permissions:
+  contents: read
+
 jobs:
   webserver-build-test-ubuntu:
     name: webserver-ubuntu-build
@@ -198,6 +201,8 @@ jobs:
   Codeql-build:
     name: static-analysis
     runs-on: ubuntu-20.04
+    permissions:
+      security-events: write
     steps:
       - name: checkout otel webserver
         uses: actions/checkout@v3
