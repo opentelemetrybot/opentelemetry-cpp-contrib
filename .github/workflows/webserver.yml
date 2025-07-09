@@ -199,6 +199,8 @@ jobs:
 
 
   Codeql-build:
+    permissions:
+      security-events: write # required for CodeQL analysis upload
     name: static-analysis
     runs-on: ubuntu-20.04
     steps:
