@@ -201,6 +201,8 @@ jobs:
   Codeql-build:
     name: static-analysis
     runs-on: ubuntu-20.04
+    permissions:
+      security-events: write
     steps:
       - name: checkout otel webserver
         uses: actions/checkout@v3
