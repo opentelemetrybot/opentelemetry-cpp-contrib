@@ -200,7 +200,7 @@ jobs:
 
   Codeql-build:
     permissions:
-      security-events: write
+      security-events: write # for github/codeql-action/analyze to upload SARIF results
     name: static-analysis
     runs-on: ubuntu-20.04
     steps:
