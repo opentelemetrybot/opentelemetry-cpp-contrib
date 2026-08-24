@@ -62,7 +62,6 @@ jobs:
           bazel --output_user_root=$HOME/.cache/bazel test --copt=-DENABLE_TEST --@io_opentelemetry_cpp//api:with_abseil //...
   prometheus_cmake_window:
     name: CMake on Windows
-    if: false  # disabled. TODO: fix this job
     runs-on: windows-latest
     steps:
       - name: checkout otel contrib prometheus
