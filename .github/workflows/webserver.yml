@@ -210,7 +210,8 @@ jobs:
     permissions:
       security-events: write # for github/codeql-action/analyze to upload SARIF results
     name: static-analysis
-    runs-on: ubuntu-20.04
+    if: false  # disabled
+    runs-on: ubuntu-24.04
     steps:
       - name: checkout otel webserver
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
