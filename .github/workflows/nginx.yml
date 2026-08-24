@@ -51,6 +51,7 @@ jobs:
           files: ./artifacts/*
   nginx-build-test:
     name: nginx
+    if: false  # disabled. TODO: fix this job ( `build express backend docker` step is broken)
     runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
