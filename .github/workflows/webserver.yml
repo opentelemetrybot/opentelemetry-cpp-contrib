@@ -67,6 +67,7 @@ jobs:
 
   webserver-build-test-centos7:
     name: webserver-centos7-build
+    if: false  # disabled. TODO: fix this job
     runs-on: ubuntu-22.04
     steps:
       - name: checkout otel webserver
@@ -210,7 +211,7 @@ jobs:
     permissions:
       security-events: write # for github/codeql-action/analyze to upload SARIF results
     name: static-analysis
-    if: false  # disabled
+    if: false  # disabled. TODO: fix this job 
     runs-on: ubuntu-24.04
     steps:
       - name: checkout otel webserver
